@@ -49,7 +49,11 @@ struct JobDetailView: View {
                 }
                 
                 Button("Add to fav"){
-                    favoriteStore.favorites.append(detail)
+                    var favoritesControl = favoriteStore.favorites.first(where: {$0.id == detail.id})
+                    if favoritesControl == nil{
+                        favoriteStore.favorites.append(detail)
+                    }
+                       
                 }
                 
                 Spacer()
