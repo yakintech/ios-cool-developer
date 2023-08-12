@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct Tab: View {
-    @StateObject var settings = CounterStore()
+    @StateObject var favorites = FavoriteStore()
     var body: some View {
 
         
@@ -22,8 +22,9 @@ struct Tab: View {
                 
                 FavoritesView()
                     .tabItem{
-                        Label("Jobs", systemImage: "star.fill")
+                        Label("Favorites", systemImage: "star.fill")
                     }
+                    .badge(favorites.favorites.count)
                 
                 ProfileView()
                     .tabItem{
@@ -31,8 +32,9 @@ struct Tab: View {
                     }
                 
             }
-            .environmentObject(settings)
+           
         }
+        .environmentObject(favorites)
        
     }
 }

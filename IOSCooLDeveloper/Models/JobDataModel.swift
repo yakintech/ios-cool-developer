@@ -4,12 +4,15 @@ import Foundation
 
 
 struct JobDataModel : Decodable{
-    var id:String = "0"
-    var title:String = ""
-    var description:String = ""
-    var logo:String = ""
-    var location:String = ""
+    var id:String? = "0"
+    var position: String? = ""
+    var company : String? = ""
+    var company_logo: String? = ""
+    var description : String? = ""
+    var location : String? = ""
+    var salary_min : Double? = 0.0
+    var salary_max : Double? = 0.0
+    var tags : [String]? = []
+    
 }
 
-
-//https://64c6233ec853c26efadb2124.mockapi.io/jobs

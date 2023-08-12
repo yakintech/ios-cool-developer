@@ -14,11 +14,12 @@ func GetAllJobs(completionHandler: @escaping ([JobDataModel]) -> Void){
     
     var jobs : [JobDataModel] = [];
     
-    let request = AF.request("https://64c6233ec853c26efadb2124.mockapi.io/jobs")
+    let request = AF.request("https://remoteok.com/api")
     
     request.responseDecodable(of: [JobDataModel].self){response in
               
     jobs = response.value ?? []
+        
     
         completionHandler(jobs)
               

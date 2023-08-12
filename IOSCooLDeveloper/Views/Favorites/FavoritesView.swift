@@ -8,12 +8,16 @@
 import SwiftUI
 
 struct FavoritesView: View {
-    @EnvironmentObject var counterStore : CounterStore;
+    @EnvironmentObject var favoriteStore : FavoriteStore;
     
     var body: some View {
         VStack{
-            Text(String(counterStore.counter))
-                .font(.largeTitle)
+            ForEach(favoriteStore.favorites, id:\.id){item in
+                Text(item.position ?? "")
+                Button("Remove to fav"){
+                    favoriteStore.favorites = favoriteStore.favorites.filter({$0.id != item.id})
+                }
+            }
         }
     }
 }
