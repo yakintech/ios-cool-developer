@@ -44,17 +44,49 @@ struct JobDetailView: View {
                 HStack{
                     ForEach(detail.tags ?? [] , id: \.self){ item in
                         Text(item)
-                            .padding()
+                   
                     }
                 }
                 
-                Button("Add to fav"){
-                    var favoritesControl = favoriteStore.favorites.first(where: {$0.id == detail.id})
-                    if favoritesControl == nil{
-                        favoriteStore.favorites.append(detail)
+               
+                let favoritesControl = favoriteStore.favorites.first(where: {$0.id == detail.id})
+                
+                if favoritesControl == nil{
+                    Button("Add to fav"){
+                        favoriteStore.favorites.append(detail);
+                        
+                        do {
+                        
+                            let encodedData = try JSONEncoder().encode(favoriteStore.favorites)
+                            let userDefaults = UserDefaults.standard
+                            userDefaults.set(encodedData, forKey: "favorites")
+                            
+                            print("SAVED");
+
+                        } catch {
+                            print("ERROR");
+                        }
                     }
-                       
                 }
+                else{
+                    Button("Remove to fav"){
+                        favoriteStore.favorites = favoriteStore.favorites.filter({$0.id != detail.id})
+
+                        do {
+                        
+                            let encodedData = try JSONEncoder().encode(favoriteStore.favorites)
+                            let userDefaults = UserDefaults.standard
+                            userDefaults.set(encodedData, forKey: "favorites")
+                            
+                            print("SAVED");
+
+                        } catch {
+                            print("ERROR");
+                        }
+                    }
+                }
+              
+                
                 
                 Spacer()
                

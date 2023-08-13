@@ -3,7 +3,7 @@
 import Foundation
 
 
-struct JobDataModel : Decodable{
+struct JobDataModel : Decodable, Encodable{
     var id:String? = "0"
     var position: String? = ""
     var company : String? = ""

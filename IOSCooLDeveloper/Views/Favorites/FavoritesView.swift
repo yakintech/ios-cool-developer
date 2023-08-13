@@ -16,6 +16,18 @@ struct FavoritesView: View {
                 Text(item.position ?? "")
                 Button("Remove to fav"){
                     favoriteStore.favorites = favoriteStore.favorites.filter({$0.id != item.id})
+                    
+                    do {
+                    
+                        let encodedData = try JSONEncoder().encode(favoriteStore.favorites)
+                        let userDefaults = UserDefaults.standard
+                        userDefaults.set(encodedData, forKey: "favorites")
+                        
+                        print("SAVED");
+
+                    } catch {
+                        print("ERROR");
+                    }
                 }
             }
         }
