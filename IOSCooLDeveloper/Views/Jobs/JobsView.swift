@@ -11,6 +11,7 @@ import Combine
 struct JobsView: View {
     
     @State var jobs : [JobDataModel] = []
+    @State var originalData : [JobDataModel] = []
     @EnvironmentObject var favoriteStore : FavoriteStore;
     @State var search: String = ""
     var body: some View {
@@ -19,9 +20,11 @@ struct JobsView: View {
         ScrollView{
             
             VStack{
-                TextField("Search Location", text: $search)
+                TextField("Search Job by title", text: $search)
                     .onReceive(Just(search)) { data in
-                                    //search işlemini buraya yazabilirim
+                        
+                    
+                           
                               }
                     .padding()
                     .border(.black)
@@ -110,6 +113,7 @@ struct JobsView: View {
                 
                 GetAllJobs(){data in
                     jobs = data
+                    originalData = data
                 }
             }
         }

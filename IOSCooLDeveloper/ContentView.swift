@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
    @State var categortList : [Category] = [];
     var body: some View {
-        Tab()
+        SplashScreen()
     }
 }
 

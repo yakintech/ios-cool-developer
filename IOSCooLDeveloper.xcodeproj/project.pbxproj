@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D0BA73C2A90ECB1003BD563 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0BA73B2A90ECB1003BD563 /* SplashScreen.swift */; };
+		1D0BA7402A90F5DF003BD563 /* BatteryStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0BA73F2A90F5DF003BD563 /* BatteryStatus.swift */; };
+		1D0BA7422A90F5FB003BD563 /* PhotoGallery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0BA7412A90F5FB003BD563 /* PhotoGallery.swift */; };
 		1DAE85E32A8783700094B82B /* FavoriteStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DAE85E22A8783700094B82B /* FavoriteStore.swift */; };
 		1DD071E92A76481F0082B407 /* IOSCooLDeveloperApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD071E82A76481F0082B407 /* IOSCooLDeveloperApp.swift */; };
 		1DD071EB2A76481F0082B407 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD071EA2A76481F0082B407 /* ContentView.swift */; };
@@ -27,6 +30,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1D0BA73B2A90ECB1003BD563 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
+		1D0BA73D2A90EE63003BD563 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		1D0BA73F2A90F5DF003BD563 /* BatteryStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatteryStatus.swift; sourceTree = "<group>"; };
+		1D0BA7412A90F5FB003BD563 /* PhotoGallery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGallery.swift; sourceTree = "<group>"; };
 		1DAE85E22A8783700094B82B /* FavoriteStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteStore.swift; sourceTree = "<group>"; };
 		1DD071E52A76481F0082B407 /* IOSCooLDeveloper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IOSCooLDeveloper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DD071E82A76481F0082B407 /* IOSCooLDeveloperApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOSCooLDeveloperApp.swift; sourceTree = "<group>"; };
@@ -58,6 +65,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D0BA73E2A90F5D3003BD563 /* Device */ = {
+			isa = PBXGroup;
+			children = (
+				1D0BA73F2A90F5DF003BD563 /* BatteryStatus.swift */,
+				1D0BA7412A90F5FB003BD563 /* PhotoGallery.swift */,
+			);
+			path = Device;
+			sourceTree = "<group>";
+		};
 		1DAE85DF2A8779540094B82B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -84,6 +100,8 @@
 		1DD071E72A76481F0082B407 /* IOSCooLDeveloper */ = {
 			isa = PBXGroup;
 			children = (
+				1D0BA73E2A90F5D3003BD563 /* Device */,
+				1D0BA73D2A90EE63003BD563 /* Info.plist */,
 				1DAE85DF2A8779540094B82B /* Extensions */,
 				1DD072152A7664850082B407 /* Store */,
 				1DD071F92A7649A90082B407 /* Utilities */,
@@ -94,6 +112,7 @@
 				1DD071EA2A76481F0082B407 /* ContentView.swift */,
 				1DD071EC2A7648220082B407 /* Assets.xcassets */,
 				1DD071EE2A7648220082B407 /* Preview Content */,
+				1D0BA73B2A90ECB1003BD563 /* SplashScreen.swift */,
 			);
 			path = IOSCooLDeveloper;
 			sourceTree = "<group>";
@@ -253,6 +272,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D0BA73C2A90ECB1003BD563 /* SplashScreen.swift in Sources */,
 				1DD071EB2A76481F0082B407 /* ContentView.swift in Sources */,
 				1DAE85E32A8783700094B82B /* FavoriteStore.swift in Sources */,
 				1DD072122A765B660082B407 /* JobService.swift in Sources */,
@@ -264,7 +284,9 @@
 				1DD072172A7664930082B407 /* CounterStore.swift in Sources */,
 				1DD0720B2A7657D60082B407 /* JobsView.swift in Sources */,
 				1DD071E92A76481F0082B407 /* IOSCooLDeveloperApp.swift in Sources */,
+				1D0BA7422A90F5FB003BD563 /* PhotoGallery.swift in Sources */,
 				1DD0720D2A76580B0082B407 /* Tab.swift in Sources */,
+				1D0BA7402A90F5DF003BD563 /* BatteryStatus.swift in Sources */,
 				1DD072072A7657C40082B407 /* ProfileView.swift in Sources */,
 				1DD071FB2A7649CD0082B407 /* Constants.swift in Sources */,
 			);
@@ -398,9 +420,10 @@
 				DEVELOPMENT_TEAM = 5WJ6D6989G;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = IOSCooLDeveloper/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -427,9 +450,10 @@
 				DEVELOPMENT_TEAM = 5WJ6D6989G;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = IOSCooLDeveloper/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
